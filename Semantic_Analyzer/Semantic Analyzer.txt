@@ -1,0 +1,62 @@
+Errors to be found by a Semantics analyzer of Pym
+For a declaration or parameter of name x:
+	1. x is already defined in the current scope.
+		e.g.	a:int
+				......
+				a:int
+	2. x is the same as a keyword. (Actually such an error is impossible to detected by the analyzer, since the parser must have find it)
+		e.g.	int:int
+
+For a reference of a name x (using the name):
+	6. x is used as an ID, (i.e., x is an ID expression).
+	    (1) The declaration of the name x cannot be found.
+	    (2) Or, the declaration of the name x can be found but is a function.
+			e.g.	a=a+1, however a is not declaration
+					a=a+1, however a is the function declaration
+									
+	8. x is used as a function name in a function call, but such a function declaration with the name x cannot be found.
+		e.g. a=find(), but find is not declaration
+		
+	9. x is used as a function name (in a function call), but the number of arguments in the function call is different from the number of parameters in the function declaration.
+		e.g.	def find(a,b)
+				find(a)
+		
+	11. For an array expression of the form (e1)[e2], or of the form e1[e2] —note that it is recorded by the parser as an expression of the index operator— e2 does not have the integer type.
+		e.g.	cars: str[]
+				cars = ["Ford", "Volvo", "BMW"]
+				a:str
+				a = "Tesla"
+				cars[a] = "Musk"
+	12. For an array expression of the form (e1)[e2], e1 does not have the address type(means it is an integer or number, however it can be a string).
+		e.g.	e1: int
+				e1[0] = 5
+
+	13. exp is an expression using a multiplicative operator, which is * or /, but one or two of its two operands expression does not have the integer type.
+		e.g.	a:int
+				b:str
+				a/b
+		
+For an expression exp:
+	14. exp applies a relational operator, which is one of:
+	      <= < > >= == != = and not or, but the it is not true that: both of the two operand expressions are integer, or the left side of the two operand expression is number, the left side of the two operand expression is number or integer, or both have the address type, or both have the string type.
+		e.g.	a:int
+				a = 5
+				cars: str[]
+				cars = ["Ford", "Volvo", "BMW"]
+				if cars == a: 
+					print("True")
+				
+				
+	15. exp applies an additive operator (+ or -), and one of the
+	    operand has the void type.
+		e.g.	a: int
+				a = 1
+				def b()
+					print("Moon")
+				a = a + b()
+	16. exp applies the + operator, but the two operands are both addresses.
+		e.g. 	cars: str[]
+				planet: str[]
+				cars = ["Ford", "Volvo", "BMW"]
+				planet = ["Moon", "Earth"]
+				cars = cars + planet
