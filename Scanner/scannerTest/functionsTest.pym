@@ -1,0 +1,9 @@
+printnum(someNumber)
+printstr(someStr)
+inputnum( )
+inputstr( )
+str2num(someString)
+ # return a number based on the string, its behavior is undefined
+ # if the string does not match the form of a number.
+num2str(someNumber)
+ # returns a string based on a number

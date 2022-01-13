@@ -1,0 +1,19 @@
+# has void parameter, void return
+def my_function1():
+ print("Hello from a function")
+
+# has char[] parameter x, and char[] return, according to the function body
+def my_function2(x):
+ return "Hello " + x # x must be used as a string.
+
+def print_sum_num(x, y): # x and y must be two numbers, according to the function body
+ sum = x + y
+ sentence = "The sum of " + num2str(x) + " and " + num2str(y) + "is \n"
+ printstr(sentence)
+ printnum(sum)
+
+def add_str(x:str, y : str) -> str :
+ return x + y # require two strings as arguments and return their concatenation.
+
+def sum_pure(x, y): # x and y should both be numbers, or both be strings
+ return x + y # return type is either number or string, depending on the function

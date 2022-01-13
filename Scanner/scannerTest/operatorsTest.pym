@@ -1,0 +1,5 @@
+a = "Hello"
+b = "World"
+c = a + " " + b # c records the address of the first character of a string.
+printstr(c)
+arr2 = ["hi", "good","#","APPLE"]

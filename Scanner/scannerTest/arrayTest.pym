@@ -1,0 +1,8 @@
+cars = ["Ford", "Volvo", "BMW"]
+# cars is an array of string
+cars[0] = "Toyota" # change the first element of cars
+a = "Hello, World!" # a string is also an conceptually array
+printstr(a[1])
+
+cars = ["Ford", "Volvo", "BMW","INT"]
+

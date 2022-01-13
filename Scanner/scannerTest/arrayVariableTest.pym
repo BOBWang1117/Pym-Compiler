@@ -1,0 +1,19 @@
+arr1 : int[5]
+arr2 : num[ ]
+arr3 : [ ]
+arr1 = [1, 2, 3, 4, 5]
+arr2 = ["hi", "good"]
+arr3 = arr1 # ok, arr3 can be assigned with any array.
+arr3 = ["it", "is", "ok] $ fine.
+
+# b is an array of number, whose size is not specified by itself
+# size is supposed to be the size of the array b.
+def last_element (size:int, b: num[]):
+ return arr[size-1]
+# arr is an array of 5 strings.
+def first_element (arr: str[5]):
+ return arr[size-1]
+def add(x, y)
+ return x + y
+printnum(add(3, 5)) 
+printstr(add("good ", " day"))

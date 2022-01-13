@@ -1,0 +1,50 @@
+if_stmt ::= "if" expression ":" suite
+                ( "elif" expression ":" suite )*
+                ["else" ":" suite]
+
+# with no else
+if condition :
+ indentedStatementBlock
+
+#with else
+if condition :
+  indentedStatementBlockForTrueCondition
+else:
+  indentedStatementBlockForFalseCondition
+
+# with elif
+if condition1 :
+  indentedStatementBlockForCondition1
+elif condition2:
+  indentedStatementBlockForCondition2
+
+
+if balance < 0:
+    transfer = -balance
+    # transfer enough from the backup account:
+    backupAccount = backupAccount - transfer
+    balance = balance + transfer
+
+printstr("What is the temperature?\n")
+temperature = inputnum()
+if temperature > 70:
+ print('Wear shorts.')
+else:
+ print('Wear long pants.')
+ print('Get some exercise outside.')
+
+
+grade = inputnum()
+if grade >= 93 :
+ printstr("it is A+\n")
+elif grade >=88:
+ printstr("It is A\n")
+elif grace >= 50 :
+ printstr("Pass\n")
+else
+ printstr("Oops\n")
+
+
+
+
+
