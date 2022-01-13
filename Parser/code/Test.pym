@@ -1,0 +1,27 @@
+x = a(3,4,5) and b or 2\3 + a()
+
+y:int[]
+y:str[]
+if x==y:
+  a=b
+  c=d
+elif x==z:
+  x=y
+  y=z
+elif y==z:
+  y=1
+else
+  e=l
+  t=t+1
+while x==y:
+  a1=b1
+  a2=b2
+def a (x:int,b:str[],c):
+  x=2
+  return x
+  
+def b ():
+  x3:int
+
+x= ( 1==2 and 3==4)+1 
+
