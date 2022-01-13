@@ -29,14 +29,13 @@
 
 ## **Dependencies:** 
 
-- 
-- 
+- None
 
 
 
 ## **Install package:**
 
-- 
+- None
 
 
 
@@ -48,11 +47,5 @@
 
 
 
-## **Example:**
 
-1. ![gif1](./)
-
-   
-
-   
 
