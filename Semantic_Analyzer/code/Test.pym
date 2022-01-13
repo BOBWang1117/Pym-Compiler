@@ -1,0 +1,22 @@
+def t(x:int):
+  x=1
+x:str
+a:str
+d=1
+d7=2
+x=d+d7
+b:str[]
+y:int[]
+
+if x==y[1] and x==1:
+  a=b
+
+while x==y:
+  a=b
+  
+def aa (xx:int,b:str[],c):
+  if b[1]==b[1]:
+    t=b
+  x=2
+  return x
+  
